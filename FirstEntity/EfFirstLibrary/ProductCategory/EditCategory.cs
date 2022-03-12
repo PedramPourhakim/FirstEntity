@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace EfFirstLibrary.ProductCategory
 {
-    public class EditCategory
+    public class EditCategory :CreateCategory
     {
-        public string Name { get; set; }
+        public int Id { get; set; }
     }
 }

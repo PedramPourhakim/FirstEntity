@@ -8,7 +8,7 @@ namespace EfFirstLibrary.ProductCategory
 {
     public interface IProductCategoryRepository
     {
-        public void Get(int Id);
+        public Category Get(int Id);
         public void Create(Category category);
         public bool Exists(string name);
         public void SaveChanges();
