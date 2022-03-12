@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EfFirstLibrary.Product
+namespace EfFirstLibrary.TheProduct
 {
      public class Product
     {
