@@ -1,4 +1,5 @@
 using EfFirstLibrary.Context;
+using EfFirstLibrary.ProductCategory;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +28,10 @@ namespace FirstEntityProject
         {
             services.AddMvc(option => option.EnableEndpointRouting = false);
             services.AddRazorPages();
+            services.AddScoped<IProductCategoryRepository, ProductCategoryRepository>();
+            services.AddScoped<IProductCategoryApplication, ProductCategoryApplication>();
+            services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
+            services.AddTransient<IProductCategoryApplication, ProductCategoryApplication>();
             services.AddDbContext<EfContext>(x=>x.UseSqlServer(Configuration.GetConnectionString("Izak")));
             services.AddControllersWithViews();
         }
