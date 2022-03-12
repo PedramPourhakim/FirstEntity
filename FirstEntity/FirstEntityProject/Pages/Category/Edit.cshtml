@@ -1,0 +1,12 @@
+﻿@page
+@model FirstEntityProject.Pages.Category.EditModel
+@{
+}
+<form method="post">
+   <label asp-for="@Model.command.Name">نام:</label>
+    <input type="text" asp-for="@Model.command.Name" />
+    <input type="hidden" asp-for="@Model.command.Id" />
+    <br />
+    <hr />
+    <button type="submit">ذخیره</button>
+</form>
