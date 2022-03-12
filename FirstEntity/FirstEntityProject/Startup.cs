@@ -2,16 +2,11 @@ using EfFirstLibrary.Context;
 using EfFirstLibrary.ProductCategory;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
+using Microsoft.EntityFrameworkCore.Design;
 namespace FirstEntityProject
 {
     public class Startup
