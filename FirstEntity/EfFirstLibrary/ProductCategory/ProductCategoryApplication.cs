@@ -17,8 +17,8 @@ namespace EfFirstLibrary.ProductCategory
         {
             if (productCategoryRepository.Exists(command.Name))
                 return;
-            var Category = new Category(command.Name);
-            productCategoryRepository.Create(Category);
+            var category = new Category(command.Name);
+            productCategoryRepository.Create(category);
         }
 
         public void Edit(EditCategory command)
