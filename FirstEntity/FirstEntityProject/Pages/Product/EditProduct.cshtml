@@ -1,0 +1,19 @@
+﻿@page
+@model FirstEntityProject.Pages.Product.EditProductModel
+@{
+}
+<form align="center" method="post">
+    <label asp-for="@Model.command.Name">نام جدید :</label>
+    <input asp-for="@Model.command.Name" />
+    <br />
+    <label asp-for="@Model.command.UnitPrice">قیمت جدید:</label>
+    <input asp-for="@Model.command.UnitPrice" />
+    <br />
+    <select asp-items="@Model.productcategories"asp-for="@Model.command.CategoryId">
+        <option value="0">دسته محصول </option>
+    </select>
+    <br />
+    <input type="hidden"asp-for="@Model.command.Id"value="@Model.command.Id" />
+    <br />
+    <button type="submit">ویرایش محصول</button>
+</form>

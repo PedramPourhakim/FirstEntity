@@ -1,0 +1,17 @@
+﻿@page
+@model FirstEntityProject.Pages.Product.CreateProductModel
+@{
+}
+<form align="center"method="post">
+    <label for="Name">نام:</label>
+    <input type="text"name="Name"id="Name" />
+    <br />
+    <label for="UnitPrice">قیمت:</label>
+    <input type="number"name="UnitPrice" />
+    <br />
+    <select asp-items="@Model.ProductCategories"id="Category"name="CategoryId">
+        <option value="0">گروه محصول را انتخاب کنید</option>
+    </select>
+    <hr />
+    <button type="submit">ایجاد</button>
+</form>

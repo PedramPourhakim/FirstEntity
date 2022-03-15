@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstEntityProject", "FirstEntityProject\FirstEntityProject.csproj", "{1451B557-541B-4310-9FAE-220C20992F61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstEntityProject", "FirstEntityProject\FirstEntityProject.csproj", "{1451B557-541B-4310-9FAE-220C20992F61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfFirstLibrary", "EfFirstLibrary\EfFirstLibrary.csproj", "{9202575D-CA9E-4A62-8368-59CFA3C953F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EfFirstLibrary", "EfFirstLibrary\EfFirstLibrary.csproj", "{9202575D-CA9E-4A62-8368-59CFA3C953F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

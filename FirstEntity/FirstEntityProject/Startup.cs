@@ -7,6 +7,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore.Design;
+using EfFirstLibrary.TheProduct;
+
 namespace FirstEntityProject
 {
     public class Startup
@@ -27,6 +29,10 @@ namespace FirstEntityProject
             services.AddScoped<IProductCategoryApplication, ProductCategoryApplication>();
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
             services.AddTransient<IProductCategoryApplication, ProductCategoryApplication>();
+            services.AddTransient<IProductRepository, ProductRepository>();
+            services.AddTransient<IProductApplication, ProductApplication>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductApplication, ProductApplication>();
             services.AddDbContext<EfContext>(x=>x.UseSqlServer(Configuration.GetConnectionString("Izak")));
             services.AddControllersWithViews();
         }

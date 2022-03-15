@@ -1,0 +1,41 @@
+﻿@page
+@model FirstEntityProject.Pages.Product.ProductIndexModel
+@{
+}
+<h1 align="center"style="color:royalblue">لیست محصولات</h1>
+<p align="center"><a asp-page="/Product/CreateProduct">ایجاد محصول جدید</a></p>
+<table align="center"style="width:auto">
+    <thead>
+        <tr>
+            <th>آیدی</th>
+            <th>نام</th>
+            <th>قیمت</th>
+            <th>دسته</th>
+            <th>تاریخ ایجاد</th>
+            <th>عملیات</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.Products)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.UnitPrice</td>
+                    <td>@item.Category</td>
+                    <td>@item.CreationDate</td>
+                    <td>
+                        <a asp-page="/Product/EditProduct"asp-route-id="@item.Id">ویرایش</a>
+                        @if(!item.IsRemoved)
+                {
+                    <a asp-page="/Product/Index"asp-page-handler="Remove"asp-route-id="@item.Id">غیر فعال</a>
+                }
+                else
+                {
+                    <a asp-page="/Product/Index"asp-page-handler="Restore"asp-route-id="@item.Id">فعالسازی</a>
+                }
+                    </td>
+                </tr>
+            }
+    </tbody>
+</table>
