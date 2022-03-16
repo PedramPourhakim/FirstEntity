@@ -22,5 +22,15 @@ namespace FirstEntityProject.Pages.Product
         {
             Products = productApplication.Search(productSearchModel);
         }
+        public RedirectToPageResult OnGetRemove(int Id)
+        {
+            productApplication.Remove(Id);
+            return RedirectToPage("/Product/ProductIndex");
+        }
+        public RedirectToPageResult OnGetRestore(int Id)
+        {
+            productApplication.Restore(Id);
+            return RedirectToPage("/Product/ProductIndex");
+        }
     }
 }

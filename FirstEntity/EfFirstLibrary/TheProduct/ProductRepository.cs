@@ -49,7 +49,7 @@ namespace EfFirstLibrary.TheProduct
 
         public List<ProductViewModel> Search(ProductSearchModel searchModel)
         {
-            var query = efContext.Products.Select(x => new ProductViewModel
+            var query = efContext.Products.Include(x=>x.Category).Select(x => new ProductViewModel
             {
                 Name = x.Name,
                 Id = x.Id,

@@ -28,11 +28,11 @@
                         <a asp-page="/Product/EditProduct"asp-route-id="@item.Id">ویرایش</a>
                         @if(!item.IsRemoved)
                 {
-                    <a asp-page="/Product/Index"asp-page-handler="Remove"asp-route-id="@item.Id">غیر فعال</a>
+                    <a asp-page="/Product/ProductIndex"asp-page-handler="Remove"asp-route-id="@item.Id">غیر فعال</a>
                 }
                 else
                 {
-                    <a asp-page="/Product/Index"asp-page-handler="Restore"asp-route-id="@item.Id">فعالسازی</a>
+                    <a asp-page="/Product/ProductIndex"asp-page-handler="Restore"asp-route-id="@item.Id">فعالسازی</a>
                 }
                     </td>
                 </tr>
